@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16.dp"
+    android:layout_marginVertical="8.dp"
+    android:background="@drawable/mid_fi_card">
+
+    <!-- Answered Emerald Left Border -->
+    <View
+        android:id="@+id/viewAnsweredIndicator"
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:background="@color/answered_emerald"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16.dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textViewAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+                android:textColor="@color/brand"
+                tools:text="Anonymous" />
+
+            <!-- Answered Badge -->
+            <TextView
+                android:id="@+id/textViewAnsweredBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@color/answered_emerald_alpha"
+                android:paddingHorizontal="8.dp"
+                android:paddingVertical="2.dp"
+                android:text="ANSWERED"
+                android:textAppearance="@style/TextAppearance.Material3.LabelSmall"
+                android:textColor="@color/answered_emerald"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textViewContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8.dp"
+            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+            android:textColor="@color/white"
+            tools:text="Question content goes here..." />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12.dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipUpvotes"
+                style="@style/Widget.Material3.Chip.Assist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                app:chipBackgroundColor="@color/surface_light"
+                app:chipIcon="@drawable/ic_arrow_upward"
+                app:chipIconTint="@color/brand"
+                app:chipStrokeWidth="0dp"
+                tools:text="12 Upvotes" />
+
+            <View
+                android:layout_width="0.dp"
+                android:layout_height="0.dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/textViewTimestamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.Material3.LabelSmall"
+                android:textColor="@color/border"
+                tools:text="2 mins ago" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

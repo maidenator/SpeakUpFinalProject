@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="24.dp">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64.dp"
+        android:text="SpeakUp"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineLarge"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.dp"
+        android:text="Anonymous Q&amp;A for Lectures"
+        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+        android:textColor="@color/border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutEmail"
+        style="@style/mid_fi_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48.dp"
+        android:hint="University Email"
+        android:textColorHint="@color/border"
+        app:hintTextColor="@color/brand"
+        app:layout_constraintTop_toBottomOf="@id/textViewSubtitle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/white" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutPassword"
+        style="@style/mid_fi_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.dp"
+        android:hint="Password"
+        android:textColorHint="@color/border"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/border"
+        app:hintTextColor="@color/brand"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayoutEmail">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textColor="@color/white" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textViewRoleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24.dp"
+        android:text="I am a:"
+        android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayoutPassword" />
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggleGroupRole"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.dp"
+        app:checkedButton="@id/buttonStudent"
+        app:layout_constraintTop_toBottomOf="@id/textViewRoleLabel"
+        app:selectionRequired="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonStudent"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0.dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Student"
+            android:textColor="@color/toggle_text_selector"
+            app:backgroundTint="@color/toggle_background_selector"
+            app:strokeColor="@color/border" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonProfessor"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0.dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Professor"
+            android:textColor="@color/toggle_text_selector"
+            app:backgroundTint="@color/toggle_background_selector"
+            app:strokeColor="@color/border" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonLogin"
+        style="@style/mid_fi_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48.dp"
+        android:text="LOG IN"
+        android:textColor="@color/background"
+        app:backgroundTint="@color/brand"
+        app:layout_constraintTop_toBottomOf="@id/toggleGroupRole" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

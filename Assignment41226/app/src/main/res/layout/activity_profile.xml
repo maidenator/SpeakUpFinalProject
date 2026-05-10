@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="24dp" android:gravity="center_horizontal">
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Student Dashboard" android:textSize="24sp" android:textStyle="bold"
+        android:layout_marginTop="32dp" android:layout_marginBottom="24dp"/>
+
+    <TextView android:id="@+id/tvProfileName" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Name Placeholder" android:textColor="#212121" android:textStyle="bold" android:textSize="22sp" />
+
+    <TextView android:id="@+id/tvProfileEmail" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Email Placeholder" android:textSize="16sp" android:layout_marginBottom="32dp"/>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:weightSum="2" android:layout_marginBottom="32dp">
+
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+            <TextView android:id="@+id/tvQuestionsCount" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="0" android:textSize="28sp" android:textStyle="bold" android:textColor="#3F51B5"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Questions Asked"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+            <TextView android:id="@+id/tvUpvotesCount" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="0" android:textSize="28sp" android:textStyle="bold" android:textColor="#3F51B5"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Upvotes Received"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View android:layout_width="match_parent" android:layout_height="1dp"
+        android:background="#E0E0E0" android:layout_marginBottom="16dp"/>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switchDefaultAnon" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Default to Anonymous Mode" android:textSize="16sp" android:padding="8dp" android:layout_marginBottom="32dp"/>
+
+    <Space android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
+
+    <Button android:id="@+id/btnLogout" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Log Out" android:backgroundTint="#7E57C2" android:layout_marginBottom="24dp"/>
+</LinearLayout>

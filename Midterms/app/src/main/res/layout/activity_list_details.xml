@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Property Details:"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_marginBottom="50sp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/propertyAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address: address"
+        android:textSize="16sp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Type: type"
+        android:textSize="16sp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price: price"
+        android:textSize="16sp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/squareFootage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Square Footage: footage"
+        android:textSize="16sp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/bedroomCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bedroom Count: bedroomCount"
+        android:textSize="16sp">
+    </TextView>
+
+
+</LinearLayout>

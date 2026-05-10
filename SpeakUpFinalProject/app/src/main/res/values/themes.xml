@@ -1,0 +1,80 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.SpeakUpFinalProject" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Main colors -->
+        <item name="colorPrimary">@color/brand</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorSurfaceVariant">@color/surface_light</item>
+
+        <!-- Status bar and navigation bar -->
+        <item name="android:statusBarColor">@color/background</item>
+        <item name="android:navigationBarColor">@color/background</item>
+    </style>
+
+    <style name="Theme.SpeakUpFinalProject" parent="Base.Theme.SpeakUpFinalProject" />
+
+    <!-- Custom Styles -->
+    <style name="mid_fi_input" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/surface</item>
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+        <item name="boxStrokeColor">@color/border</item>
+        <item name="boxStrokeWidth">1.5dp</item>
+        <item name="boxStrokeWidthFocused">2.5dp</item>
+        <item name="hintEnabled">false</item>
+    </style>
+
+    <style name="mid_fi_button" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/brand</item>
+        <item name="materialThemeOverlay">@style/BrandButtonThemeOverlay</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.LargeComponent.Rounded</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="elevation">4dp</item>
+    </style>
+
+    <style name="BrandButtonThemeOverlay">
+        <item name="colorPrimary">@color/brand</item>
+    </style>
+
+    <style name="ShapeAppearance.LargeComponent.Rounded" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <!-- Style for the Role Toggle Buttons to force custom colors -->
+    <style name="Widget.App.RoleButton" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="backgroundTint">@color/toggle_background_selector</item>
+        <item name="android:textColor">@color/toggle_text_selector</item>
+        <item name="strokeColor">@color/border</item>
+    </style>
+
+    <!-- Option 2: Custom Theme Overlay for the Role Toggles -->
+    <style name="ThemeOverlay.App.RoleToggle" parent="">
+        <!-- Checked state background slots -->
+        <item name="colorPrimary">@color/role_selected_color</item>
+        <item name="colorPrimaryContainer">@color/role_selected_color</item>
+        <item name="colorSecondary">@color/role_selected_color</item>
+        <item name="colorSecondaryContainer">@color/role_selected_color</item>
+        <item name="colorTertiary">@color/role_selected_color</item>
+        <item name="colorTertiaryContainer">@color/role_selected_color</item>
+        <item name="colorContainer">@color/role_selected_color</item>
+        <item name="colorSurfaceContainerHighest">@color/role_selected_color</item>
+
+        <!-- Checked state text/icon color slots -->
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnPrimaryContainer">@color/white</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorOnSecondaryContainer">@color/white</item>
+        <item name="colorOnTertiary">@color/white</item>
+        <item name="colorOnTertiaryContainer">@color/white</item>
+        <item name="colorOnContainer">@color/white</item>
+        <item name="colorOnSurface">@color/white</item>
+
+        <!-- Unselected state colors -->
+        <item name="colorOutline">@color/border</item>
+        <item name="colorControlHighlight">#33FFFFFF</item>
+    </style>
+</resources>

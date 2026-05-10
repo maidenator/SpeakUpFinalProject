@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Bright Purple/Brand color when the user is typing -->
+    <item android:state_focused="true" android:color="@color/brand" />
+    <!-- Visible Gray color for the box outline -->
+    <item android:color="#4B5563" />
+</selector>
